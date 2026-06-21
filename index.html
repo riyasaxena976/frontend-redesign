@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC - Networking & Cyber Security Training Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <script>
+        // Apply theme immediately before page renders to prevent flickering
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container-fluid">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919876543211">+91 98765 43211</a>
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a>
+                    </span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container-fluid">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-shield-alt"></i> CNC
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>Networking Training</h4>
+                                        <ul>
+                                            <li><a href="#ccna">CCNA</a></li>
+                                            <li><a href="#ccnp">CCNP</a></li>
+                                            <li><a href="#ccie">CCIE</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h4>Security Training</h4>
+                                        <ul>
+                                            <li><a href="#palo-alto">Palo Alto</a></li>
+                                            <li><a href="#fortigate">Fortigate</a></li>
+                                            <li><a href="#network-security">Network Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h4>Enterprise Training</h4>
+                                        <ul>
+                                            <li><a href="#sd-wan">Cisco SD-WAN</a></li>
+                                            <li><a href="#f5">F5 Load Balancer</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h4>Professional Services</h4>
+                                        <ul>
+                                            <li><a href="#rack-rental">Rack Rental</a></li>
+                                            <li><a href="#job-assurance">Job Assurance</a></li>
+                                            <li><a href="#corporate">Corporate Training</a></li>
+                                            <li><a href="#placement">Placement Assistance</a></li>
+                                            <li><a href="#career">Career Guidance</a></li>
+                                            <li><a href="#interview">Interview Preparation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="victory.html" class="nav-link">Victory</a></li>
+                        <li><a href="ecertificate.html" class="nav-link">E-Certificate</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#" class="btn btn-login">Login</a>
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Popup -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Start Your Networking Career Today</h2>
+            <form class="registration-form" id="registrationForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Interested Course</option>
+                        <option value="ccna">CCNA</option>
+                        <option value="ccnp">CCNP</option>
+                        <option value="ccie">CCIE</option>
+                        <option value="palo-alto">Palo Alto</option>
+                        <option value="fortigate">Fortigate</option>
+                        <option value="network-security">Network Security</option>
+                        <option value="sd-wan">Cisco SD-WAN</option>
+                        <option value="f5">F5 Load Balancer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Register Now</button>
+                <button type="button" class="btn btn-secondary" id="modalCloseBtn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Master Networking & Cyber Security</h1>
+                <p>Industry-leading training programs designed for career advancement</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#demo" class="btn btn-secondary">Book Free Demo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop">
+                    <source media="(max-width: 1024px)" srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Professional networking setup with advanced technology infrastructure" class="hero-img" loading="lazy">
+                </picture>
+                <noscript>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Professional networking setup">
+                </noscript>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Courses</h2>
+                <p>Comprehensive training programs for all skill levels</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>CCNA</h3>
+                    <p>Cisco Certified Network Associate</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> 120 hours training</li>
+                        <li><i class="fas fa-check"></i> Live lab sessions</li>
+                        <li><i class="fas fa-check"></i> Exam preparation</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>CCNP</h3>
+                    <p>Cisco Certified Network Professional</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> 200 hours training</li>
+                        <li><i class="fas fa-check"></i> Advanced labs</li>
+                        <li><i class="fas fa-check"></i> Job guarantee</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Security+</h3>
+                    <p>CompTIA Security Certification</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> 80 hours training</li>
+                        <li><i class="fas fa-check"></i> Practical scenarios</li>
+                        <li><i class="fas fa-check"></i> Certificate included</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Cyber Security</h3>
+                    <p>Advanced Cyber Security Training</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> 150 hours training</li>
+                        <li><i class="fas fa-check"></i> Hands-on projects</li>
+                        <li><i class="fas fa-check"></i> Career support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <p>Real experiences from our graduates</p>
+            </div>
+            <div class="testimonials-slider-container">
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excellent training program! The instructors are very knowledgeable and helpful. I passed my CCNA exam on the first attempt."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" alt="Rajesh Kumar" class="author-photo">
+                            <div class="author-info">
+                                <h4>Rajesh Kumar</h4>
+                                <p>CCNA Graduate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Best decision I made for my career. The practical labs and real-world scenarios made learning so much easier and effective."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop" alt="Priya Joshi" class="author-photo">
+                            <div class="author-info">
+                                <h4>Priya Joshi</h4>
+                                <p>Security+ Certified</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Outstanding instructors and comprehensive curriculum. Got placed within 2 weeks after completing the course. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop" alt="Arun Verma" class="author-photo">
+                            <div class="author-info">
+                                <h4>Arun Verma</h4>
+                                <p>Network Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The job placement assistance was amazing. They helped me with resume, interview prep, and placement. Thank you!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop" alt="Meera Singh" class="author-photo">
+                            <div class="author-info">
+                                <h4>Meera Singh</h4>
+                                <p>Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Demo Form Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>Book Your Free Demo Class</h2>
+                    <p>Join our free demo class and experience our training methodology</p>
+                </div>
+                <form class="demo-form" id="demoForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Course</option>
+                                <option value="ccna">CCNA</option>
+                                <option value="ccnp">CCNP</option>
+                                <option value="ccie">CCIE</option>
+                                <option value="security">Cyber Security</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Free Demo</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Section -->
+    <section class="placement-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Placement Assistance</h2>
+                <p>Your journey to a successful career starts here</p>
+            </div>
+            <div class="placement-grid">
+                <div class="placement-card">
+                    <div class="placement-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Job Guarantee Program</h3>
+                    <p>Guaranteed job placement or 100% refund within 6 months of course completion</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Interview Preparation</h3>
+                    <p>Dedicated interview coaching and mock sessions with industry experts</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Resume Building</h3>
+                    <p>Professional resume crafting and LinkedIn profile optimization</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Corporate Tie-ups</h3>
+                    <p>Direct recruitment partnerships with leading IT companies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top-section">
+            <div class="container">
+                <div class="footer-newsletter">
+                    <div class="newsletter-content">
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <p>Get the latest updates on courses, certifications, and career opportunities</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>CNC Institute</h3>
+                    </div>
+                    <p>Leading Networking & Cyber Security Training Institute providing industry-recognized certifications and career advancement opportunities.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-arrow-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-arrow-right"></i> Courses</a></li>
+                        <li><a href="victory.html"><i class="fas fa-arrow-right"></i> Success Stories</a></li>
+                        <li><a href="ecertificate.html"><i class="fas fa-arrow-right"></i> E-Certificate</a></li>
+                        <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact Us</a></li>
+                        <li><a href="blog.html"><i class="fas fa-arrow-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4><i class="fas fa-graduation-cap"></i> Popular Courses</h4>
+                    <ul>
+                        <li><a href="#ccna"><i class="fas fa-arrow-right"></i> CCNA Certification</a></li>
+                        <li><a href="#ccnp"><i class="fas fa-arrow-right"></i> CCNP Professional</a></li>
+                        <li><a href="#security"><i class="fas fa-arrow-right"></i> Cyber Security</a></li>
+                        <li><a href="#palo-alto"><i class="fas fa-arrow-right"></i> Palo Alto Security</a></li>
+                        <li><a href="#sd-wan"><i class="fas fa-arrow-right"></i> SD-WAN Training</a></li>
+                        <li><a href="#fortigate"><i class="fas fa-arrow-right"></i> Fortigate Expert</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4><i class="fas fa-phone-alt"></i> Contact Info</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>New Delhi, India</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h5>5000+</h5>
+                            <p>Students Trained</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h5>95%</h5>
+                            <p>Placement Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h5>150+</h5>
+                            <p>Partner Companies</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h5>12+ LPA</h5>
+                            <p>Average Salary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2024 CNC Institute. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-center">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms & Conditions</a>
+                    <span>•</span>
+                    <a href="#">Cookie Policy</a>
+                    <span>•</span>
+                    <a href="#">Refund Policy</a>
+                </div>
+                <div class="footer-bottom-right">
+                    <p>Made with <i class="fas fa-heart"></i> by CNC Team</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

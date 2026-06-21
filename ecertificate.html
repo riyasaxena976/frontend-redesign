@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Certificate - CNC Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Apply theme immediately before page renders to prevent flickering
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <div class="top-bar" id="topBar">
+        <div class="container-fluid">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="contact-item"><i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    <span class="contact-item"><i class="fas fa-phone"></i><a href="tel:+919876543211">+91 98765 43211</a></span>
+                    <span class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container-fluid">
+            <div class="nav-wrapper">
+                <div class="nav-logo"><a href="index.html" class="logo"><i class="fas fa-shield-alt"></i> CNC</a></div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column"><h4>Networking Training</h4><ul><li><a href="#ccna">CCNA</a></li><li><a href="#ccnp">CCNP</a></li><li><a href="#ccie">CCIE</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Security Training</h4><ul><li><a href="#palo-alto">Palo Alto</a></li><li><a href="#fortigate">Fortigate</a></li><li><a href="#network-security">Network Security</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Enterprise Training</h4><ul><li><a href="#sd-wan">Cisco SD-WAN</a></li><li><a href="#f5">F5 Load Balancer</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Professional Services</h4><ul><li><a href="#rack-rental">Rack Rental</a></li><li><a href="#job-assurance">Job Assurance</a></li><li><a href="#corporate">Corporate Training</a></li><li><a href="#placement">Placement Assistance</a></li><li><a href="#career">Career Guidance</a></li><li><a href="#interview">Interview Preparation</a></li></ul></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="victory.html" class="nav-link">Victory</a></li>
+                        <li><a href="ecertificate.html" class="nav-link">E-Certificate</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <a href="#" class="btn btn-login">Login</a>
+                    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>E-Certificate Portal</h1>
+            <p>Verify and download your digital certificates</p>
+        </div>
+    </section>
+
+    <section class="ecertificate-section">
+        <div class="container">
+            <div class="ecert-content">
+                <div class="verification-form">
+                    <h2>Verify Your Certificate</h2>
+                    <p>Enter your certification details to verify and download your e-certificate</p>
+                    <form id="certForm">
+                        <div class="form-group">
+                            <label>Certificate Number</label>
+                            <input type="text" placeholder="Enter certificate number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Verify Certificate</button>
+                    </form>
+                </div>
+
+                <div class="cert-info">
+                    <h2>About Our Certificates</h2>
+                    <div class="feature-list">
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Industry Recognized</h4>
+                            <p>Our certificates are recognized by leading IT companies and employers worldwide.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Verified & Secure</h4>
+                            <p>Each certificate is digitally signed and can be verified through our portal.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-download"></i>
+                            <h4>Easy Download</h4>
+                            <p>Download your certificate in multiple formats including PDF and digital badges.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-share-alt"></i>
+                            <h4>Shareable</h4>
+                            <p>Share your certificates directly on LinkedIn, email, or your professional profiles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sample-certificates">
+                <h2>Sample Certificates</h2>
+                <div class="cert-grid">
+                    <div class="cert-sample">
+                        <div class="cert-preview">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>CCNA Certificate</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Sample</a>
+                    </div>
+                    <div class="cert-sample">
+                        <div class="cert-preview">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>CCNP Certificate</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Sample</a>
+                    </div>
+                    <div class="cert-sample">
+                        <div class="cert-preview">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>Security+ Certificate</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Sample</a>
+                    </div>
+                    <div class="cert-sample">
+                        <div class="cert-preview">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>Cyber Security Certificate</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Sample</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h4>About CNC</h4><p>Leading Networking & Cyber Security Training Institute providing industry-recognized certifications and career advancement opportunities.</p><div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+                <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="victory.html">Victory</a></li><li><a href="ecertificate.html">E-Certificate</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-column"><h4>Courses</h4><ul><li><a href="#ccna">CCNA</a></li><li><a href="#ccnp">CCNP</a></li><li><a href="#security">Cyber Security</a></li><li><a href="#palo-alto">Palo Alto</a></li></ul></div>
+                <div class="footer-column"><h4>Contact Info</h4><ul><li><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></li><li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 CNC Institute. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p></div>
+        </div>
+    </footer>
+
+    <style>
+        .ecertificate-section { padding: 80px 20px; }
+        .ecert-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto 80px; }
+        .verification-form { background-color: var(--bg-light-gray); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); height: fit-content; }
+        .verification-form h2 { margin-bottom: 10px; color: var(--text-light); }
+        .verification-form > p { font-size: 14px; color: var(--text-dark); margin-bottom: 25px; }
+        .verification-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-light); }
+        .verification-form .btn { width: 100%; margin-top: 15px; }
+        
+        .cert-info h2 { margin-bottom: 30px; color: var(--text-light); }
+        .feature-list { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        .feature { display: flex; gap: 15px; }
+        .feature i { font-size: 28px; color: var(--primary-color); flex-shrink: 0; }
+        .feature h4 { margin: 0 0 5px 0; color: var(--text-light); }
+        .feature p { margin: 0; font-size: 14px; color: var(--text-dark); }
+        
+        .sample-certificates { background-color: var(--bg-light-gray); padding: 60px 40px; border-radius: 12px; border: 1px solid var(--border-color); }
+        .sample-certificates h2 { text-align: center; margin-bottom: 40px; color: var(--text-light); }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; }
+        .cert-sample { text-align: center; }
+        .cert-preview { background-color: var(--bg-light); padding: 40px 20px; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); }
+        .cert-preview i { font-size: 50px; color: var(--primary-color); margin-bottom: 10px; display: block; }
+        .cert-preview p { margin: 0; font-size: 14px; color: var(--text-dark); }
+        .cert-sample .btn { width: 100%; }
+        
+        @media (max-width: 768px) {
+            .ecert-content { grid-template-columns: 1fr; gap: 40px; }
+            .cert-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .cert-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

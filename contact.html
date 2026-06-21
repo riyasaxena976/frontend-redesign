@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CNC Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Apply theme immediately before page renders to prevent flickering
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <div class="top-bar" id="topBar">
+        <div class="container-fluid">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="contact-item"><i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    <span class="contact-item"><i class="fas fa-phone"></i><a href="tel:+919876543211">+91 98765 43211</a></span>
+                    <span class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container-fluid">
+            <div class="nav-wrapper">
+                <div class="nav-logo"><a href="index.html" class="logo"><i class="fas fa-shield-alt"></i> CNC</a></div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column"><h4>Networking Training</h4><ul><li><a href="#ccna">CCNA</a></li><li><a href="#ccnp">CCNP</a></li><li><a href="#ccie">CCIE</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Security Training</h4><ul><li><a href="#palo-alto">Palo Alto</a></li><li><a href="#fortigate">Fortigate</a></li><li><a href="#network-security">Network Security</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Enterprise Training</h4><ul><li><a href="#sd-wan">Cisco SD-WAN</a></li><li><a href="#f5">F5 Load Balancer</a></li></ul></div>
+                                    <div class="mega-menu-column"><h4>Professional Services</h4><ul><li><a href="#rack-rental">Rack Rental</a></li><li><a href="#job-assurance">Job Assurance</a></li><li><a href="#corporate">Corporate Training</a></li><li><a href="#placement">Placement Assistance</a></li><li><a href="#career">Career Guidance</a></li><li><a href="#interview">Interview Preparation</a></li></ul></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="victory.html" class="nav-link">Victory</a></li>
+                        <li><a href="ecertificate.html" class="nav-link">E-Certificate</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <a href="#" class="btn btn-login">Login</a>
+                    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team for any inquiries</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>CNC Institute<br>New Delhi, India 110001</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a><br><a href="tel:+919876543211">+91 98765 43211</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h2>Send us a Message</h2>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h4>About CNC</h4><p>Leading Networking & Cyber Security Training Institute providing industry-recognized certifications and career advancement opportunities.</p><div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+                <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="victory.html">Victory</a></li><li><a href="ecertificate.html">E-Certificate</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-column"><h4>Courses</h4><ul><li><a href="#ccna">CCNA</a></li><li><a href="#ccnp">CCNP</a></li><li><a href="#security">Cyber Security</a></li><li><a href="#palo-alto">Palo Alto</a></li></ul></div>
+                <div class="footer-column"><h4>Contact Info</h4><ul><li><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@cncinstitute.com">info@cncinstitute.com</a></li><li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 CNC Institute. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p></div>
+        </div>
+    </footer>
+
+    <style>
+        .contact-section { padding: 80px 20px; }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; }
+        .contact-info { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .info-card { background-color: var(--bg-light-gray); padding: 30px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color); }
+        .info-card i { font-size: 40px; color: var(--primary-color); margin-bottom: 15px; }
+        .info-card h3 { margin: 15px 0 10px; color: var(--text-light); }
+        .info-card p { font-size: 14px; color: var(--text-dark); }
+        .info-card a { color: var(--primary-color); text-decoration: none; }
+        .info-card a:hover { text-decoration: underline; }
+        .contact-form { background-color: var(--bg-light-gray); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); }
+        .contact-form h2 { margin-bottom: 25px; color: var(--text-light); }
+        .contact-form .form-group { margin-bottom: 20px; }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+        .contact-form textarea { resize: vertical; min-height: 120px; }
+        .contact-form .btn { width: 100%; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .contact-content { grid-template-columns: 1fr; gap: 40px; }
+            .contact-info { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>
