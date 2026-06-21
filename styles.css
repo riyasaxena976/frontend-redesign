@@ -26,6 +26,7 @@
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+/* ===== AGGRESSIVE MOBILE RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -33,10 +34,12 @@
 }
 
 html, body {
-    scroll-behavior: smooth;
     width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 body {
@@ -46,7 +49,6 @@ body {
     line-height: 1.6;
     transition: var(--transition);
     width: 100%;
-    max-width: 100%;
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -1945,7 +1947,7 @@ img {
 
     .nav-menu {
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: -100%;
         flex-direction: column;
         background-color: var(--bg-light);
@@ -1954,6 +1956,7 @@ img {
         transition: left 0.3s;
         padding: 20px 0;
         border-bottom: 1px solid var(--border-color);
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -2810,16 +2813,14 @@ video, iframe {
     box-sizing: border-box;
 }
 
-/* Fix navbar overflow */
+/* Fix navbar overflow - removed overflow: hidden to allow dropdowns */
 .navbar {
     width: 100%;
-    overflow: hidden;
 }
 
 .nav-wrapper {
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* Fix hero section */
@@ -2912,6 +2913,7 @@ p, a, span, label {
 
 /* Mobile-specific fixes for < 600px */
 @media (max-width: 600px) {
+    /* Removed aggressive * reset to preserve layout spacing on mobile */
     * {
         box-sizing: border-box;
     }
@@ -2921,54 +2923,135 @@ p, a, span, label {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     .container {
         width: 100%;
         max-width: 100%;
-        padding: 0 12px;
+        padding: 0 15px;
         margin: 0;
+        box-sizing: border-box;
     }
 
     .container-fluid {
         width: 100%;
         max-width: 100%;
-        padding: 0 12px;
+        padding: 0 15px;
         margin: 0;
+        box-sizing: border-box;
     }
 
-    /* Navbar fixes */
+    /* Top bar - hide on mobile */
+    .top-bar {
+        display: none !important;
+    }
+
+    /* Navbar */
     .navbar {
-        width: 100vw;
+        width: 100%;
         padding: 0;
     }
 
     .nav-wrapper {
         width: 100%;
-        padding: 10px 12px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+    }
+
+    .nav-logo a {
+        font-size: 20px;
     }
 
     .nav-list {
-        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        max-width: 100%;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 40px 15px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        overflow: hidden;
+    }
+
+    .hero-text {
         width: 100%;
     }
 
-    /* Section fixes */
-    .hero,
+    .hero-text h1 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+        word-wrap: break-word;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 250px;
+        border-radius: 8px;
+        display: block;
+    }
+
+    /* Sections */
     .courses-section,
     .testimonials-section,
     .gallery-section,
     .demo-section,
-    .placement-section,
-    .contact-section,
-    .page-header {
+    .placement-section {
+        padding: 40px 15px;
         width: 100%;
-        padding-left: 12px;
-        padding-right: 12px;
+        overflow: hidden;
     }
 
-    /* Grid fixes - single column */
+    .section-header {
+        width: 100%;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .section-header p {
+        font-size: 13px;
+    }
+
+    /* Grids */
     .courses-grid,
     .testimonials-grid,
     .gallery-grid,
@@ -2981,23 +3064,88 @@ p, a, span, label {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
+        overflow: hidden;
     }
 
-    /* Card fixes */
+    /* Cards */
     .course-card,
     .testimonial-card,
     .placement-card,
     .victory-card,
     .blog-card,
-    .info-card,
-    .stat-item {
+    .info-card {
         width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
     }
 
-    /* Form fixes */
+    .course-icon,
+    .placement-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .course-card h3 {
+        font-size: 16px;
+    }
+
+    .course-card p {
+        font-size: 12px;
+    }
+
+    .course-features li {
+        font-size: 11px;
+    }
+
+    /* Testimonials Slider */
+    .testimonials-slider-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .testimonials-slider .testimonial-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+    .slider-controls {
+        gap: 8px;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    /* Gallery */
+    .gallery-image {
+        height: 180px;
+    }
+
+    /* Demo Form */
+    .demo-content {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .demo-text h2 {
+        font-size: 20px;
+    }
+
+    .demo-form {
+        width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
     .form-row {
         width: 100%;
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .form-group {
@@ -3008,57 +3156,61 @@ p, a, span, label {
     .form-group select,
     .form-group textarea {
         width: 100%;
+        padding: 11px 12px;
+        font-size: 12px;
     }
 
-    /* Button fixes */
-    .btn {
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .demo-form .btn {
         width: 100%;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    /* Contact Page */
+    .contact-content {
         width: 100%;
-    }
-
-    /* Image fixes */
-    img {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-    }
-
-    /* Hero content */
-    .hero-content {
         grid-template-columns: 1fr;
     }
 
-    .hero-text h1 {
-        font-size: 20px;
+    .contact-form {
+        width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
     }
 
-    .hero-buttons {
-        flex-direction: column;
+    .contact-form h2 {
+        font-size: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
         width: 100%;
     }
 
-    .hero-buttons .btn {
+    .contact-form .btn {
         width: 100%;
     }
 
-    /* Footer fixes */
+    /* Footer */
     .footer {
         width: 100%;
+        padding: 30px 15px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .footer-top-section {
+        padding: 25px 15px;
     }
 
     .footer-newsletter {
+        width: 100%;
         grid-template-columns: 1fr;
     }
 
     .newsletter-form {
+        width: 100%;
         flex-direction: column;
     }
 
@@ -3067,15 +3219,70 @@ p, a, span, label {
         width: 100%;
     }
 
-    /* Modal fix */
-    .modal-content {
-        width: calc(100vw - 30px);
-        max-width: calc(100vw - 30px);
+    .footer-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
     }
 
-    /* Text overflow fix */
-    a, p, span, h1, h2, h3, h4, h5, h6 {
-        word-break: break-word;
+    .footer-socials {
+        gap: 8px;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 35px 15px;
+        width: 100%;
+    }
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-login {
+        width: auto;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Text */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        width: 100%;
+    }
+
+    p, a, span {
+        word-wrap: break-word;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
+        padding: 20px;
+    }
+
+    /* Registration Form */
+    .registration-form {
+        width: 100%;
+    }
+
+    .registration-form .btn {
+        width: 100%;
     }
 }
 
